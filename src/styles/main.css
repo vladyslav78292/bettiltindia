@@ -884,10 +884,43 @@ li::marker {
   transform: translateX(-50%);
 }
 
+.deposits__container {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.deposit__container {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.deposit__title {
+  color: white;
+  font-size: 18px;
+}
+
+.deposit__description {
+  color: #B9C5E1;
+  font-size: 16px;
+}
+
 @media (max-width: 720px) {
   .questions-title {
     font-size: 18px;
     margin-left: 16px;
+  }
+
+  .deposits__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .deposit__container {
+    width: 100%;
   }
 
   .dropdown {
@@ -1144,6 +1177,8 @@ li::marker {
 @media (max-width: 720px) {
   #button {
     height: 35px;
+    right: 15px;
+    bottom: 15px;
     width: 35px;
     margin: 15px;
   }
