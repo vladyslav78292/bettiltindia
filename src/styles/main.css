@@ -81,7 +81,6 @@ button {
 }
 
 .welcome-banner {
-  height: 420px;
   position: absolute;
 	top: 0px;
   width: 100%
@@ -647,7 +646,7 @@ button:focus {outline: none;}
     margin-bottom: 16px;
   }
 
-	.welcome-banner, .main__image {
+	.main__image {
 		height: 260px;
 	}
 
