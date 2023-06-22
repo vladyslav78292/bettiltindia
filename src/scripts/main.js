@@ -39,12 +39,15 @@ dropdowns.forEach(dropdown => {
 });
 
 const button = $('#button');
+const header = $('#header');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
     button.addClass('show');
+    header.addClass('header__background');
   } else {
     button.removeClass('show');
+    header.removeClass('header__background');
   }
 });
 
