@@ -820,13 +820,13 @@ li::marker {
 
 .first-table-description {
   padding: 2px 0;
-  width: 150px;
+  width: 180px;
 }
 
 .table {
   display: flex;
   flex-direction: column;
-  background-color: #2B3B4B;
+  background-color: #353D52;
   color: white;
   border-radius: 17px;
   margin-top: 34px;
@@ -837,7 +837,7 @@ li::marker {
   padding: 8px 0;
   padding-left: 10px;
 	width: 200px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .first-table-description-last {
@@ -853,14 +853,7 @@ li::marker {
   display: flex;
   align-items: center;
   font-weight: 400;
-  border-bottom: 1px solid #fff;
-}
-
-.table-title {
-  padding: 8px 0;
-  padding-left: 10px;
-	width: 200px;
-  font-size: 18px;
+  border-bottom: 1px solid #232939;
 }
 
 .third-table-title {
@@ -872,13 +865,13 @@ li::marker {
 }
 
 .table-title-container {
-  border-right: 1px solid #fff;
+  border-right: 1px solid #232939;
   padding: 2px 0;
 }
 
 .table-description {
   padding-left: 8px;
-  font-size: 18px;
+  font-size: 15px;
   padding-right: 10px;
   font-weight: 400;
 }
@@ -981,7 +974,7 @@ li::marker {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 6px solid #fff;
+  border-top: 6px solid #232939;
   transition: 0.3s;
 }
 
