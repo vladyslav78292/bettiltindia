@@ -4,9 +4,9 @@ $(document).ready(function(){
   $(".MainSliderCarousel").slick({
     rtl:false,
     autoplay:true,
-    autoplaySpeed: 4500,
     speed: 500,
     dots: true,
+    autoplaySpeed: 4000,
     slidesToShow:1,
     slidesToScroll:1,
     pauseOnHover:true,

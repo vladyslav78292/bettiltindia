@@ -515,7 +515,7 @@ button {
   flex-direction: column;
 }
 
-.section__title {
+.section__title, .title {
   font-weight: 700;
   font-size: 24px;
   color: white;
