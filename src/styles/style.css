@@ -1628,21 +1628,24 @@ li::marker {
 #cookie-popup {
   position: fixed;
   z-index: 9999;
-  left: 10%;
+  left: 15%;
   bottom: 30px;
-  right: 10%;
-  padding: 20px 30px;
+  align-items: center;
+  right: 15%;
+  border-radius: 17px;
+  padding: 40px 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: rgba(0,0,0,0.85);
+  background: linear-gradient(136.18deg, rgb(41, 47, 65) 28.25%, rgb(70, 79, 102) 98.65%);
   color: #eee;
+  display: flex;
+  gap: 20px;
 }
 
 #cookie-popup p:first-child {
   margin: 0;
-  color: #eee;
-  font-weight: 900;
-  color: #00adef;
+  font-weight: 400;
+  color: #B9C5E1;
 }
 
 #cookie-popup p:nth-child(2) {
@@ -1652,34 +1655,63 @@ li::marker {
 }
 
 #cookie-popup .link {
-  color: #00adef;
+  color: rgb(0, 174, 139);
+  position: relative;
   text-decoration: none;
 }
 
+#cookie-popup .link::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  background-color: rgb(0, 174, 139);
+  transition: all 0.2s ease-in-out;
+  height: 1px;
+  width: 0px;
+}
+
+#cookie-popup .link:hover::before {
+  width: 75px;
+}
+
+#cookie-popup > div {
+  display: flex;
+  gap: 10px;
+}
 #cookie-popup button {
-  width: 100%;
   font-size: 16px;
-  font-weight: 600;
-  font-family: 'Montserrat';
-  padding: 8px 0;
+  margin-right: 0;
+  font-weight: 400;
+  padding: 8px 12px;
+  white-space: nowrap;
   display: inline-block;
+  height: 52px;
   color: #fff;
-  background-color: #00adef;
-  
- 
+  background-color: transparent;
+  border-radius: 27px;
+  border: 1px solid rgb(60, 204, 135);
 }
 
 #cookie-popup button:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: rgb(60, 204, 135);;  
 }
 
-@media only screen and (max-width: 450px) {
+.decline-button {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+@media only screen and (max-width: 720px) {
   #cookie-popup {
     max-width: 95%;
     right: 0;
     bottom: 20px;
     left: 0;
     margin: 0 auto;
+  }
+
+  #cookie-popup {
+    flex-direction: column;
   }
 }
