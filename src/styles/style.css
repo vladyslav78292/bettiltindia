@@ -12,6 +12,9 @@ body,
 h2,
 h3,
 h4,
+th,
+td,
+tr,
 h5,
 h6,
 table,
@@ -51,6 +54,7 @@ button {
   z-index: 32;
   align-items: center;
   position: fixed;
+  top: 0px;
   transition: all 0.4s linear;
   width: 100%;
 }
@@ -72,6 +76,21 @@ button {
   text-decoration: none;
 }
 
+header > div {
+  display: flex;
+  gap: 10px;
+}
+
+.first--link {
+  background: transparent;
+  color: white;
+  border: 2px solid #275c4d;
+}
+
+.footer__images > span {
+  color: #B9C5E1;
+}
+
 @media (max-width: 720px) {
   .header {
     width: 100%;
@@ -87,6 +106,7 @@ button {
 
   .header__button-link {
     font-size: 13px;
+    padding: 8px 12px;
   }
 }
 
@@ -120,6 +140,37 @@ button {
   height: 130px;
   position: absolute;
   bottom: 0;
+}
+
+#scroll {
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  cursor:pointer;
+  width:50px;
+  height:50px;
+  background-color:#3498db;
+  text-indent:-9999px;
+  display:none;
+  -webkit-border-radius:60px;
+  -moz-border-radius:60px;
+  border-radius:60px
+}
+#scroll span {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-8px;
+  margin-top:-12px;
+  height:0;
+  width:0;
+  border:8px solid transparent;
+  border-bottom-color:#ffffff;
+}
+#scroll:hover {
+  background-color:#e74c3c;
+  opacity:1;filter:"alpha(opacity=100)";
+  -ms-filter:"alpha(opacity=100)";
 }
 
 .welcome-banner__title {
@@ -421,6 +472,105 @@ button {
   white-space: nowrap;
 }
 
+::-webkit-scrollbar {
+  background: #000000;
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #005a2b;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b456;
+}
+
+
+.wrapper {
+  border: 1px solid #000000;
+  height: calc(100vh - 2px);
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: calc(100vw - 2.55px);
+}
+
+.first-table--first-column, .first-table--third-column {
+  min-width: 120px;
+}
+
+.first__table-first-row, .third-table-first-row {
+  background-color: #1D222F;
+}
+
+.first-table--second-column {
+  min-width: 135px;
+}
+
+.first-table--fourth-column {
+  min-width: 200px;
+}
+
+.scroll-top {
+  background: linear-gradient(90deg, #FFC700 0%, #FFEA21 100%), #FF9E2C;
+  border: 0;
+  border-radius: 50%;
+  bottom: 35px;
+  cursor: pointer;
+  height: 70px;
+  margin: 15px;
+  opacity: 0.75;
+  position: fixed;
+  right: 35px;
+  width: 70px;
+  opacity: 0;
+  z-index: 99;
+  transition: all 0.4s linear;
+}
+
+.arrow-top {
+  position: relative;
+  left: 22px;
+  top: 20px;
+  height: 25px;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.arrow {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 4px;
+}
+
+.arrow.up::after {  
+  transform: rotate(-135deg);
+  font-size: 60px;
+  content: "\f077";
+}
+
+.content-container {
+  display: flex;
+  height: 300px;
+  width: 100%
+}
+
+.content {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: auto;
+}
+
 .mobile__app-text-container {
   display: flex;
   flex-direction: column;
@@ -498,6 +648,10 @@ button {
   margin-bottom: 50px;
 }
 
+.addictional-main {
+  margin-top: 110px;
+}
+
 .main__title {
   font-weight: 700;
   font-size: 28px;
@@ -522,6 +676,11 @@ button {
   display: flex;
   justify-content: center;
   margin-top: 45px;
+}
+
+.title {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .section__title-description {
@@ -554,7 +713,8 @@ button {
 .section__element {
   color: #B9C5E1;
   line-height: 24px;
-  margin-top: 10px
+  margin-top: 10px;
+  margin-left: 15px;
 }
 
 li::marker {
@@ -592,7 +752,7 @@ li::marker {
 .first__table-row {
   gap: 10px;
   display: flex;
-  min-width: 930px;
+  min-width: 670px;
   padding: 0px;
   align-items: center;
   font-weight: 400;
@@ -655,6 +815,7 @@ li::marker {
 
 .first__table-description--with-width {
   width: 230px;
+  min-width: 200px;
 }
 
 .first-table-title-container {
@@ -756,7 +917,7 @@ li::marker {
   min-width: 520px;
 }
 .second-table-row {
-  min-width: 560px;
+  min-width: 500px;
 }
 
 .section__pretitle {
@@ -910,10 +1071,72 @@ li::marker {
   position: static;
 }
 
+@media (max-width: 1200px) {
+	.welcome-banner__title {
+		width: 80%;
+		justify-content: start;
+		align-items: start;
+		font-size: 32px;
+		margin-top: 180px;
+	}
+  
+  .dropdown {
+    width: auto;
+    margin-left: 0;
+  }
+
+	.welcome-banner__paragraph {
+    text-align: start;
+    font-size: 24px;
+	}
+
+  .welcome-banner__button-link {
+    margin-left: -50px;
+		bottom: 110px;
+    color: #1D222F;
+    background: linear-gradient(90deg, #FFC700 0%, #FFEA21 100%), #FF9E2C;
+    border-radius: 100px;
+    border: none;
+    font-size: 21px;
+    text-decoration: none;
+    font-weight: 700;
+    position: absolute;
+    z-index: 10;
+    padding: 18px 30px;
+    bottom: 56px;
+    left: 160px;
+  }
+
+  .games__image {
+    width: 100%;
+  }
+
+  .main__image--first, .main__image--second, .main__image--third {
+		background-position: 60%;
+	}
+
+  .section {
+    margin-left: 99px;
+    margin-right: 116px;
+  }
+}
+
 @media (max-width: 720px) {
   .questions-title {
     font-size: 18px;
     margin-left: 16px;
+  }
+
+  .scroll-top {
+    height: 35px;
+    width: 35px;
+  }
+
+  .arrow-top {
+    width: 20px;
+    height: 20px;
+    left: 7px;
+    top: 8px;
   }
 
   .deposits__container {
@@ -949,51 +1172,6 @@ li::marker {
   .section__list-container {
     flex-direction: column;
     gap: 0px;
-  }
-}
-
-@media (max-width: 1200px) {
-	.welcome-banner__title {
-		width: 80%;
-		justify-content: start;
-		align-items: start;
-		font-size: 32px;
-		margin-top: 180px;
-	}
-
-	.welcome-banner__paragraph {
-    text-align: start;
-    font-size: 24px;
-	}
-
-  .welcome-banner__button-link {
-    margin-left: -50px;
-		bottom: 110px;
-    color: #1D222F;
-    background: linear-gradient(90deg, #FFC700 0%, #FFEA21 100%), #FF9E2C;
-    border-radius: 100px;
-    border: none;
-    font-size: 21px;
-    text-decoration: none;
-    font-weight: 700;
-    position: absolute;
-    z-index: 10;
-    padding: 18px 30px;
-    bottom: 56px;
-    left: 160px;
-  }
-
-  .games__image {
-    width: 100%;
-  }
-
-  .main__image--first, .main__image--second, .main__image--third {
-		background-position: 60%;
-	}
-
-  .section {
-    margin-left: 99px;
-    margin-right: 116px;
   }
 }
 
@@ -1122,6 +1300,7 @@ li::marker {
   visibility: hidden;
   z-index: 1000;
 }
+
 #button::after {
   content: "\f077";
   font-family: FontAwesome;
@@ -1131,13 +1310,16 @@ li::marker {
   line-height: 50px;
   color: #fff;
 }
+
 #button:hover {
   cursor: pointer;
   background-color: #333;
 }
+
 #button:active {
   background-color: #555;
 }
+
 #button.show {
   opacity: 1;
   visibility: visible;
@@ -1163,7 +1345,7 @@ li::marker {
   line-height: 35px;
   position: relative;
   color: #232939;
-  top: 15px;
+  top: 0px;
 }
 
 .content h1 {
@@ -1213,7 +1395,7 @@ li::marker {
     position: relative;
     color: #232939;
     font-size: 21px;
-    top: 8px
+    top: 3px;
   }
 }
 .steps {
@@ -1359,6 +1541,7 @@ li::marker {
 
 .footer__images {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-top: 44px;
 }
@@ -1417,6 +1600,8 @@ li::marker {
   }
 
   .footer__images {
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
   }
 
@@ -1437,5 +1622,64 @@ li::marker {
   .footer__casino {
     margin-bottom: 24px;
     gap: 24px;
+  }
+}
+
+#cookie-popup {
+  position: fixed;
+  z-index: 9999;
+  left: 30px;
+  bottom: 30px;
+  width: 330px;
+  padding: 20px 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.85);
+  color: #eee;
+}
+
+#cookie-popup p:first-child {
+  margin: 0;
+  color: #eee;
+  font-weight: 900;
+  color: #00adef;
+}
+
+#cookie-popup p:nth-child(2) {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+#cookie-popup .link {
+  color: #00adef;
+  text-decoration: none;
+}
+
+#cookie-popup button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  padding: 8px 0;
+  display: inline-block;
+  color: #fff;
+  background-color: #00adef;
+  
+ 
+}
+
+#cookie-popup button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media only screen and (max-width: 450px) {
+  #cookie-popup {
+    max-width: 95%;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    margin: 0 auto;
   }
 }

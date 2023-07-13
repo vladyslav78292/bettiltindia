@@ -40,13 +40,16 @@ dropdowns.forEach(dropdown => {
 
 const button = $('#button');
 const header = $('#header');
+const button_pp = $('#button_pp');
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
     button.addClass('show');
+    button_pp.addClass('show');
     header.addClass('header__background');
   } else {
     button.removeClass('show');
+    button_pp.removeClass('show');
     header.removeClass('header__background');
   }
 });
@@ -54,4 +57,8 @@ $(window).scroll(function() {
 button.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '300');
+});
+
+$("#cookie-popup button").click(function() {
+  $("#cookie-popup").fadeOut();
 });
