@@ -980,7 +980,7 @@ li::marker {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 6px solid #232939;
+  border-top: 6px solid #fff;
   transition: 0.3s;
 }
 
@@ -1293,7 +1293,7 @@ li::marker {
   border-radius: 4px;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 1%;
   transition: background-color .3s, 
     opacity .5s, visibility .5s;
   opacity: 0;
@@ -1628,9 +1628,9 @@ li::marker {
 #cookie-popup {
   position: fixed;
   z-index: 9999;
-  left: 30px;
+  left: 10%;
   bottom: 30px;
-  width: 330px;
+  right: 10%;
   padding: 20px 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
