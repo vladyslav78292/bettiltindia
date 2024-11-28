@@ -52,8 +52,8 @@ if (!sessionStorage.getItem('scriptExecuted')) {
   sessionStorage.setItem('scriptExecuted', 'true');
 }
 
-$("#cookie-popup button").click(function() {
-  $("#cookie-popup").fadeOut();
+$(".cookie-popup button").click(function() {
+  $(".cookie-popup").fadeOut();
 });
 
 let menuBtn = document.querySelector('.menu-btn');
