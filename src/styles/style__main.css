@@ -69,10 +69,6 @@ table td {
   padding: 10px;
 }
 
-button {
-  display: none;
-}
-
 .header__background {
   background-color: #353D52;
 }
@@ -240,15 +236,6 @@ header > div {
 	overflow:hidden;
 }
 
-button {
-	cursor: pointer;
-	margin-right: 8px;
-	border:none;
-	border-radius: 4px;
-	background-color: #3066BE;
-	color:#FFF;
-	transition: all 0.5s;
-}
 
 .main__image--first {
   background-color: #6B00F4;
@@ -392,7 +379,7 @@ button {
 }
 
 .small_icons img {
-  width: 12%;
+  width: 9%;
 }
 
 .advantages_disadvantages {
@@ -401,10 +388,33 @@ button {
   justify-content: space-between;
 }
 
+.sports_container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.sports_container img {
+  width: calc(12% - 5px);
+}
+
+.image_container img {
+  width: 40%;
+}
+
+.image_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px ;
+}
+
 .bonus_images {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 20px;
   gap: 15px;
 }
@@ -1940,4 +1950,93 @@ tr td p {
 
 .cookie-visible {
   display: flex;
+}
+
+.tabs__header {
+  display: flex
+;
+  padding: 1px;
+  align-items: center;
+  gap: 1px;
+  border-radius: 8px;
+  background: #e7e6df;
+  width: 100%;
+  list-style: none;
+  margin-top: 0;
+  overflow-x: auto;
+}
+.tabs__header-button.active {
+  border-radius: 8px;
+  background: #fff;
+  color: #171716;
+  font-size: 15px;
+  font-weight: 500;
+}
+.tabs__header-button {
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #4b4b4b;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 11px 12px;
+  border: none;
+  width: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #e7e6df;
+}
+.tabs__header-item {
+  flex: 1 1;
+}
+
+.tab {
+  display: none !important;
+}
+
+.active {
+  display: flex !important;
+  gap: 20px ;
+}
+
+.tab img {
+  width: 40%;
+}
+
+.tabs__header {
+  display: flex
+;
+  padding: 1px;
+  align-items: center;
+  gap: 1px;
+  border-radius: 8px;
+  background: #e7e6df;
+  width: 100%;
+  list-style: none;
+  margin-top: 0;
+  overflow-x: auto;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-top: 20px;
+}
+
+.tab > h2 {
+  justify-self: start;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.tabs {
+  margin-top: 25px;
 }

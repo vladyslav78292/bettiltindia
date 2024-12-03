@@ -74,3 +74,19 @@ menuItem.forEach (function(menuItem) {
 })
 
 
+const buttons = document.querySelectorAll('.tabs__header-item button');
+
+const tabs = document.querySelectorAll('.tab');
+
+// Добавляем обработчики событий для каждой кнопки
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // Убираем класс 'active' у всех <li> и всех вкладок
+    document.querySelectorAll('.tabs__header-item').forEach((item) => item.classList.remove('active'));
+    tabs.forEach((tab) => tab.classList.remove('active'));
+
+    // Добавляем класс 'active' к текущему <li> и соответствующей вкладке
+    button.parentElement.classList.add('active'); // Активируем текущий li
+    tabs[index].classList.add('active'); // Активируем вкладку по индексу кнопки
+  });
+});
