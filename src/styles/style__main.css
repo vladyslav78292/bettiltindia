@@ -93,6 +93,13 @@ table td {
   width: 125px;
 }
 
+.play_now {
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .header__button-link {
   font-weight: 700;
   white-space: nowrap;
@@ -379,7 +386,7 @@ header > div {
 }
 
 .small_icons img {
-  width: 10%;
+  width: 100%;
 }
 
 .advantages_disadvantages {
@@ -1281,7 +1288,7 @@ li::marker {
   display: flex;
   align-items: center;
   text-transform: capitalize;
-  gap: 15px;
+  gap: 40px;
 }
 
 main a {
@@ -2027,6 +2034,7 @@ tr td p {
 }
 
 .tab {
+  flex-direction: column;
   display: none !important;
 }
 
