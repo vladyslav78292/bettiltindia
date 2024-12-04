@@ -379,7 +379,7 @@ header > div {
 }
 
 .small_icons img {
-  width: 9%;
+  width: 10%;
 }
 
 .advantages_disadvantages {
@@ -388,10 +388,17 @@ header > div {
   justify-content: space-between;
 }
 
+.sports_container > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .sports_container {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
@@ -2002,7 +2009,12 @@ tr td p {
   gap: 20px ;
 }
 
+.tab h3 {
+  margin: 0;
+}
+
 .tab img {
+  height: 240px;
   width: 40%;
 }
 
